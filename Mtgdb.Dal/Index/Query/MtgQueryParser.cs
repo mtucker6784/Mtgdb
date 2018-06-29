@@ -200,6 +200,9 @@ namespace Mtgdb.Dal.Index
 
 				foreach (var userField in DocumentFactory.UserFields)
 				{
+					if (Str.Equals(Like, userField))
+						continue;
+
 					if (userField.IsNumericField())
 						continue;
 
@@ -228,6 +231,9 @@ namespace Mtgdb.Dal.Index
 
 				foreach (var userField in DocumentFactory.UserFields)
 				{
+					if (Str.Equals(Like, userField))
+						continue;
+
 					if (userField.IsNumericField())
 						continue;
 
@@ -284,6 +290,9 @@ namespace Mtgdb.Dal.Index
 
 				foreach (var userField in DocumentFactory.UserFields)
 				{
+					if (Str.Equals(userField, Like))
+						continue;
+
 					if (!valueIsFloat && userField.IsFloatField())
 						continue;
 
