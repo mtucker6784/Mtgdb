@@ -137,9 +137,6 @@ namespace Mtgdb.Gui
 			}
 		}
 
-		public string DeckFile { get; set; }
-		public string DeckName { get; set; }
-
 		public event Action Loaded;
 		public bool IsLoaded { get; private set; }
 

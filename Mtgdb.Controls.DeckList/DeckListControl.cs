@@ -36,7 +36,7 @@ namespace Mtgdb.Controls
 			_viewDeck.DataSource = _filteredModels;
 
 			_textBoxName.Visible = false;
-			
+
 			_customTooltip = new ViewDeckListTooltips(_tooltipOwner, _viewDeck);
 
 			_searchSubsystem = new DeckSearchSubsystem(
@@ -66,6 +66,8 @@ namespace Mtgdb.Controls
 			_higlightSubsystem = new SearchResultHiglightSubsystem(_viewDeck, _searchSubsystem, adapter);
 			_higlightSubsystem.SubscribeToEvents();
 		}
+
+
 
 		public void SetUi(UiModel ui, TooltipController controller, DeckSuggestModel suggestModel)
 		{
@@ -383,6 +385,7 @@ namespace Mtgdb.Controls
 			}
 		}
 
+		public LayoutViewControl DeckListView => _viewDeck;
 		public int ScrollPosition => _viewDeck.CardIndex;
 		public int MaxScroll => _viewDeck.Count;
 		public int FilteredDecksCount => _viewDeck.Count - 1;
