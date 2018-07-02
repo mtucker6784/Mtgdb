@@ -1028,6 +1028,18 @@ namespace Mtgdb.Gui
 
 		public bool IsSearchResultFocused() => !_cardSearch.IsSearchFocused();
 
+		public void PasteDeck(bool append) =>
+			_copyPaste.PasteDeck(append);
+
+		public void PasteCollection(bool append) =>
+			_copyPaste.PasteCollection(append);
+
+		public void CopyCollection() =>
+			_copyPaste.CopyCollection();
+
+		public void CopyDeck() =>
+			_copyPaste.CopyDeck();
+
 		private void beginRestoreSettings()
 		{
 			Interlocked.Increment(ref _restoringGuiSettings);
